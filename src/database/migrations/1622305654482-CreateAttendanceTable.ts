@@ -10,7 +10,8 @@ export default class CreateAttendanceTable1622305654482 implements MigrationInte
                     name: 'id',
                     type: 'varchar',
                     isPrimary: true,
-                    generationStrategy: 'uuid'
+                    generationStrategy: 'uuid',
+                    default: 'uuid_generate_v4()'
                 },
                 {
                     name: 'student',
