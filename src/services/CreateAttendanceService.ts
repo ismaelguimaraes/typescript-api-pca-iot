@@ -1,8 +1,6 @@
-import { getCustomRepository } from 'typeorm';
-import { startOfHour } from 'date-fns';
+import { getRepository } from 'typeorm';
 
 import Attendance from '@models/Attendance';
-import AttendanceRepository from '@repositories/AttendanceRepository';
 
 interface Request {
     student_id: string;
@@ -10,7 +8,7 @@ interface Request {
 
 class CreateAttendanceService {
     public async execute({ student_id }: Request): Promise<Attendance> {
-        const attendanceRepository = getCustomRepository(AttendanceRepository);
+        const attendanceRepository = getRepository(Attendance);
 
         const attendanceRegister = attendanceRepository.create({
             student_id
