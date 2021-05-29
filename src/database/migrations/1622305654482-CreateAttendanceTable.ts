@@ -20,7 +20,7 @@ export default class CreateAttendanceTable1622305654482 implements MigrationInte
                 {
                     name: 'presented_at',
                     type: 'timestamp with time zone',
-                    isNullable: false
+                    default: 'now()'
                 }
             ]
         }));
