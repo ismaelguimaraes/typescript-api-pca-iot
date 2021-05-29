@@ -1,10 +1,17 @@
 import { Router } from 'express';
-import { getCustomRepository } from 'typeorm';
+import { getRepository } from 'typeorm';
 
+import Student from '@models/Students';
 import CreateStudentService from '@services/CreateStudentService';
 
 const studentsRouter = Router();
 
+studentsRouter.get('/', async (request, response) => {
+    const studentsRepository = getRepository(Student);
+    const students = await studentsRepository.find();
+
+    return response.json(students);
+})
 
 studentsRouter.post('/', async (request, response) => {
     try {
