@@ -8,11 +8,9 @@ export default class CreateUsersTable1622310912019 implements MigrationInterface
                 name: 'students',
                 columns: [
                     {
-                        name: 'id',
+                        name: 'registration',
                         type: 'varchar',
                         isPrimary: true,
-                        generationStrategy: 'uuid',
-                        default: 'uuid_generate_v4()'
                     },
                     {
                         name: 'name',
