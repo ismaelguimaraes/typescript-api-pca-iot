@@ -8,7 +8,7 @@ export default class CreateAttendanceTable1622305654482 implements MigrationInte
             columns: [
                 {
                     name: 'id',
-                    type: 'varchar',
+                    type: 'uuid',
                     isPrimary: true,
                     generationStrategy: 'uuid',
                     default: 'uuid_generate_v4()'

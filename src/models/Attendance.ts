@@ -7,7 +7,7 @@ class Attendance {
     id: string;
 
     @Column()
-    student: string;
+    student_id: string;
 
     @CreateDateColumn()
     presented_at: Date;

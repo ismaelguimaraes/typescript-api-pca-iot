@@ -11,6 +11,7 @@ export default class CreateUsersTable1622310912019 implements MigrationInterface
                         name: 'registration',
                         type: 'varchar',
                         isPrimary: true,
+                        isNullable: false
                     },
                     {
                         name: 'name',
