@@ -19,10 +19,10 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@repositories/*": ["./src/repositories/*"],
-      "@models/*": ["./src/models/*"],
-      "@services/*": ["./src/services/*"],
-      "@config/*": ["./src/config/*"]
+      "@repositories/*": ["./dist/repositories/*"],
+      "@models/*": ["./dist/models/*"],
+      "@services/*": ["./dist/services/*"],
+      "@config/*": ["./dist/config/*"]
     }
   },
   "include": [
