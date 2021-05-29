@@ -1,9 +1,16 @@
-import express from 'express'
+import 'reflect-metadata';
+import express from 'express';
+import * as dotenv from 'dotenv'
 
-const app = express()
+import './database';
+dotenv.config();
+import routes from './routes';
 
-app.get('/', (request, response) => {
-  return response.json({ message: 'Hello World' })
-})
+const app = express();
 
-app.listen(3333)
+app.use(express.json());
+app.use(routes);
+
+app.listen(3333, () => {
+  console.log('🚀 Server started on port 3333!');
+});
