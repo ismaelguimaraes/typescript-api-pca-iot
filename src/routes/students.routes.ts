@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { getRepository } from 'typeorm';
 
-import Student from '@models/Students';
-import CreateStudentService from '@services/CreateStudentService';
+import Student from '../models/Students';
+import CreateStudentService from '../services/CreateStudentService';
 
 const studentsRouter = Router();
 

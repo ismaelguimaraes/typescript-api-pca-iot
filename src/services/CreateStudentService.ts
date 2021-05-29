@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 
-import Student from '@models/Students';
+import Student from '../models/Students';
 
 interface Request {
     registration: string;

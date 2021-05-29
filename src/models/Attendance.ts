@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
 
-import Student from '@models/Students';
+import Student from './Students';
 
 /**
  * Um para Um (OneToOne)

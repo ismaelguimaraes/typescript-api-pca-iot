@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { getRepository } from 'typeorm';
 
-import Attendance from '@models/Attendance';
-import CreateAttendanceService from '@services/CreateAttendanceService';
+import Attendance from '../models/Attendance';
+import CreateAttendanceService from '../services/CreateAttendanceService';
 
 const attendancesRouter = Router();
 

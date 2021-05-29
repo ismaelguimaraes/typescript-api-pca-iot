@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 
-import Attendance from '@models/Attendance';
+import Attendance from '../models/Attendance';
 
 interface Request {
     student_id: string;
