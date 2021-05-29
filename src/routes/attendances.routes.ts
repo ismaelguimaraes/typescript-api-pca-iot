@@ -1,13 +1,13 @@
 import { Router } from 'express';
-import { getCustomRepository } from 'typeorm';
+import { getRepository } from 'typeorm';
 
-import AttendanceRepository from '@repositories/AttendanceRepository';
+import Attendance from '@models/Attendance';
 import CreateAttendanceService from '@services/CreateAttendanceService';
 
 const attendancesRouter = Router();
 
 attendancesRouter.get('/', async (request, response) => {
-    const attendanceRepository = getCustomRepository(AttendanceRepository);
+    const attendanceRepository = getRepository(Attendance);
     const attendances = await attendanceRepository.find();
 
     return response.json(attendances);
