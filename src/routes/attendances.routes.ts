@@ -15,12 +15,12 @@ attendancesRouter.get('/', async (request, response) => {
 
 attendancesRouter.post('/', async (request, response) => {
     try {
-        const { student } = request.body;
+        const { student_id } = request.body;
 
         const createAttendance = new CreateAttendanceService();
 
         const attendance = await createAttendance.execute({
-            student
+            student_id
         });
 
         return response.status(200).json(attendance);
