@@ -1,7 +1,7 @@
 import { Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryColumn } from 'typeorm';
 
 @Entity('students')
-class Students {
+class Student {
 
     @PrimaryColumn()
     registration: string;
@@ -26,4 +26,4 @@ class Students {
 
 }
 
-export default Students;
+export default Student;

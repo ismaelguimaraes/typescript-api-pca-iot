@@ -1,4 +1,12 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
+
+import Student from '@models/Students';
+
+/**
+ * Um para Um (OneToOne)
+ * Um para Muitos (OneToMany)
+ * Muitos para Muitos (ManyToMany)
+ */
 
 @Entity('attendances')
 class Attendance {
@@ -8,6 +16,10 @@ class Attendance {
 
     @Column()
     student_id: string;
+
+    @ManyToOne(() => Student)
+    @JoinColumn({ name: 'student_id' })
+    student: Student;
 
     @CreateDateColumn()
     presented_at: Date;
